@@ -1,0 +1,31 @@
+from django.shortcuts import render
+
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from testapp.models import Book
+class BookListView(ListView):
+    model = Book
+    template_name = 'testapp/book_list.html'
+    context_object_name = 'book_list'
+
+class BookListView2(ListView):
+    model = Book
+    template_name = 'testapp/books.html'
+    context_object_name = 'books'
+
+class BookDetailView(DetailView):
+    model = Book
+
+class BookCreateView(CreateView):
+    model = Book
+    fields = '__all__'
+
+class BookUpdateView(UpdateView):
+    model = Book
+    fields = ('pages', 'price')
+
+
+
+from django.urls import reverse_lazy
+class BookDeleteView(DeleteView):
+    model = Book
+    success_url = reverse_lazy('listbooks')

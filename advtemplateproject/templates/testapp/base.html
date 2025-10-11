@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/advtemp.css' %}">
+    <title>BASE HTML</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar" href="/">News</a>
+        <div class="container">
+            <ul class="nav-navbar">
+                <li class="navbar" href="movie">Movies</li>
+                <li class="navbar" href="#">Sports</li>
+                <li class="navbar" href="#">Politics</li>
+            </ul>
+        </div>
+    </nav>
+    {% block body_block %}
+    {% endblock %}
+</body>
+</html>

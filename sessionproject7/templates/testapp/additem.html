@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Add item form</h1>
+        <form method="Post">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" value="add item">
+        </form>
+        <br><br>
+        <a class="btn btn-primary btn-lg" href="/display">Display Items</a>
+    </div>
+</body>
+</html>

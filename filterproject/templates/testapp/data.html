@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/filter.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% load cust_filters %}
+    {% for record in records %}
+    <h1>{{record.name}} Info</h1>
+    <ul>
+        <li>Name: {{record.name| ffu}}</li>
+        <li>Subject: {{record.subject | title}}</li>
+        <li>department: {{record.dept | lower}}</li>
+        <li>Date: {{record.date | date:"m-d-y"}}</li>
+    </ul><hr>
+    {% endfor %}
+</body>
+</html>
