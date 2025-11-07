@@ -71,7 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'authproject.wsgi.application'
 
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/logout'
 
 
 # Database

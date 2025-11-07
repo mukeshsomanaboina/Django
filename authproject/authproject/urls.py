@@ -24,6 +24,8 @@ urlpatterns = [
     path('java/', views.java_page_view),
     path('python/', views.python_page_view),
     path('aptitude/', views.aptitude_page_view),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('logout/',views.logout_view),
+
 
 ]
